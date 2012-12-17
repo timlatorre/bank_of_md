@@ -1,0 +1,23 @@
+<h3><%= child.first_name %></h3>
+
+<h4>Allowance</h4>
+    <% @chores.each do |chore|  %>
+      <% if chore.child_id == child.id && chore.is_allowance == true %>
+             <div class='chore_row'>
+          <div class='chore_name chore_col'><%= chore.name %></div>
+          <div class='chore_description chore_col'><%= chore.description %></div>
+        </div><!-- .chore_row --><br>
+      <% end %>
+    <% end %>
+
+<h4>Extra</h4>
+
+<% @chores.each do |chore| %>
+  <% if chore.child_id == child.id && chore.is_allowance == false %>
+    <div class='chore_row'>
+      <div class='chore_name chore_col'><%= chore.name %></div>
+      <div class='chore_description chore_col'><%= chore.description %></div>
+      <div class='chore_amount chore_col'><%= chore.amount %></div>
+    </div><!-- .chore_row --><br>
+  <% end %>
+<% end %>

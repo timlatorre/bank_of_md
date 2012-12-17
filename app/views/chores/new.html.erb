@@ -1,0 +1,35 @@
+<h1>new chore</h1>
+
+<%= form_tag do %>
+
+  <div class='field'>
+    <%= label_tag 'Assign to:' %>
+    <%= select("new_chore", "child_id", @auth.family.members.where(:is_parent => 'false').collect {|p| [ p.first_name, p.id ] }, {:include_blank => 'None', :prompt => 'Select'}) %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Name:' %>
+    <%= text_field_tag 'new_chore[name]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Description:' %>
+    <%= text_field_tag 'new_chore[description]' %>
+  </div>
+
+  <div class="field">
+    Type of chore?<br>
+    <%= radio_button_tag 'new_chore[is_allowance]', 'true' %> Allowance
+    <%= radio_button_tag 'new_chore[is_allowance]', 'false' %> Extra Money
+</div>
+
+  <div class='field'>
+    If extra, what is the amount?
+    <%= text_field_tag 'new_chore[amount]' %>
+  </div>
+
+  <div class='field'>
+    <%= submit_tag %>
+  </div>
+
+<% end %>

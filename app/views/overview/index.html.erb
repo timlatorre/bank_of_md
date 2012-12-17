@@ -1,0 +1,8 @@
+<h1>Overview</h1>
+
+<h2>Accounts<span id="add_account"><%= link_to "Add", accounts_new_path %></span></h2>
+<%= render :partial => 'child_accounts', :collection => @children, :as => :child %>
+
+<h2>Recent Transactions</h2>
+<%= render :partial => 'transactions', :collection => @transactions, :as => :transactions %>
+

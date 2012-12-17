@@ -1,0 +1,40 @@
+<h1>register</h1>
+
+<%= form_tag do %>
+
+  <div class='field'>
+    <%= label_tag 'First Name:' %>
+    <%= text_field_tag 'register[first_name]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Last name:' %>
+    <%= text_field_tag 'register[last_name]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Email:' %>
+    <%= text_field_tag 'register[email]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Text Number (optional):' %>
+    <%= text_field_tag 'register[text_number]' %>
+  </div>
+
+  <%= hidden_field_tag 'register[is_parent]', 'true' %>
+
+  <div class='field'>
+    <%= label_tag 'password' %>
+    <%= password_field_tag 'register[password]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'confirmation' %>
+    <%= password_field_tag 'register[password_confirmation]'%>
+  </div>
+
+  <div class='field'>
+    <%= submit_tag 'Register' %>
+  </div>
+<% end %>

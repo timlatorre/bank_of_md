@@ -6,24 +6,29 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	
+
 	<!-- Uncomment to make IE8 render like IE7 -->
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
-	
+
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-  
+
+	<title><%= content_for?(:title) ? yield(:title) : "The Bank of Mom & Dad" %></title>
+
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
-	
+
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "application" %>
-  
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= yield %>
+  <div class="container">
+      <div class="fixed contain-to-grid">
+        <nav><span id="greeting"><%= "Welcome, " if @auth %><%= link_to "#{@auth.first_name}", profile_path if @auth %></span><%= display_links %></nav>
+      </div><!-- .fixed contain-to-grid -->
+    <%= yield %>
+  </div>
 </body>
 </html>

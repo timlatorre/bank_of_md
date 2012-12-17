@@ -1,0 +1,8 @@
+<h1>chores</h1>
+<%= link_to 'new chore', chores_new_path %>
+
+<%= render :partial => 'chores', :collection => @children, :as => :child %>
+<div class='clear'></div>
+
+<h2>Available Extra Chores</h2>
+<%= render :partial => 'available', :collection => @chores, :as => :chore %>

@@ -1,0 +1,7 @@
+<% if chore.child_id == nil && chore.is_allowance == false %>
+  <div class='chore_row'>
+    <div class='chore_name chore_col'><%= chore.name %></div>
+    <div class='chore_description chore_col'><%= chore.description %></div>
+    <div class='chore_amount chore_col'><%= chore.amount %></div>
+  </div><!-- .chore_row --><br>
+<% end %>

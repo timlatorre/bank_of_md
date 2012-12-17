@@ -1,0 +1,39 @@
+<h1>Edit User</h1>
+
+<%= form_for @auth, :url => '/profile/edit' do |f| %>
+
+  <div class='field'>
+    <%= label_tag 'First Name:' %>
+    <%= f.text_field 'first_name' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Last name:' %>
+    <%= f.text_field 'last_name' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Email:' %>
+    <%= f.text_field 'email' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Text Number (optional):' %>
+    <%= f.text_field 'text_number' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Password:' %>
+    <%= f.password_field 'password' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Confirmation:' %>
+    <%= f.password_field 'password_confirmation'%>
+  </div>
+
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+
+<% end %>

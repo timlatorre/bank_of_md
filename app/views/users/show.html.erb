@@ -1,0 +1,20 @@
+<h1>Profile</h1>
+
+<%= link_to 'edit', profile_edit_path %><br>
+
+Name: <%= @auth.first_name %> <%= @auth.last_name %><br>
+Family: <%= @auth.family.name %><br>
+Email: <%= @auth.email %><br>
+Text number: <%= @auth.text_number %>
+
+<h1>Family</h1>
+
+<%= link_to 'add family member', family_exists_path %>
+
+<h2>Parents</h2>
+<%= render :partial => 'members', :collection => @parents, :as => :member %>
+<div class='clear'></div>
+
+<h2>Children</h2>
+<%= render :partial => 'members', :collection => @children, :as => :member  %>
+<div class='clear'></div>

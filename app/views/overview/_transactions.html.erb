@@ -1,0 +1,12 @@
+<div class="trans_row">
+  <div class="trans_date trans_col"><%= transactions.created_at.strftime("%m/%d") %></div>
+  <div class="trans_desc trans_col"><%= transactions.description %></div>
+  <dif class="trans_strt trans_col"><%= transactions.strt_balance %></div>
+  <div class="trans_amount trans_col">
+    <%= "+" if transactions.is_credit == "true" %>
+    <%= "-" if transactions.is_credit == "false" %>
+    <%= transactions.amt_change %>
+  </div>
+  <div class="trans_end trans_col"><%= transactions.end_balance %></div>
+
+</div><!-- .trans_row --> <br>

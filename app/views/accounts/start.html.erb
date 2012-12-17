@@ -1,0 +1,30 @@
+<h1>Step 2 of 3: Accounts</h1>
+
+<h2> New User: <%= @new_user.first_name %> </h2>
+
+<p>Basic accounts for each child include: Spending, Savings, and Charitable Giving. You can set up more accounts after this initial setup.</p>
+
+<h3> Starting balances:</h3>
+
+<%= form_tag do %>
+
+  <div class='field'>
+    <%= label_tag 'Spending:' %>
+    <%= text_field_tag 'new_spending[balance]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Savings:' %>
+    <%= text_field_tag 'new_savings[balance]' %>
+  </div>
+
+    <div class='field'>
+    <%= label_tag 'Charitable:' %>
+    <%= text_field_tag 'new_charitable[balance]' %>
+  </div>
+
+  <div class='field'>
+    <%= submit_tag %>
+  </div>
+
+<% end %>

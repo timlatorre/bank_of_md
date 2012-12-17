@@ -1,0 +1,10 @@
+<h3><%= child.first_name %></h3>
+
+<% @accounts.each do |account| %>
+<% if account.child_id == child.id %>
+      <%= account.name %>
+      <%= account.balance %>
+      <%= link_to '+', transactions_account_path(:account_id => account.id, :is_credit => true) %>
+      <%= link_to '-', transactions_account_path(:account_id => account.id, :is_credit => false) %><br>
+    <% end %>
+<% end %>

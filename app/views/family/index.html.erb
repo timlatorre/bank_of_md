@@ -1,0 +1,11 @@
+<h1>Family</h1>
+
+<%= link_to 'add family member', family_exists_path %>
+
+<h2>Parents</h2>
+<%= render :partial => 'members', :collection => @parents, :as => :member %>
+<div class='clear'></div>
+
+<h2>Children</h2>
+<%= render :partial => 'members', :collection => @children, :as => :member  %>
+<div class='clear'></div>

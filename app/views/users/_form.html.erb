@@ -1,0 +1,42 @@
+<%= form_tag do %>
+
+  <div class='field'>
+    <%= label_tag 'First Name:' %>
+    <%= text_field_tag 'new_user[first_name]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Last name:' %>
+    <%= text_field_tag 'new_user[last_name]' %>
+  </div>
+
+  <div class="field">
+    <%= radio_button_tag 'new_user[is_parent]', 'true' %> Parent
+    <%= radio_button_tag 'new_user[is_parent]', 'false' %> Child
+</div>
+
+  <div class='field'>
+    <%= label_tag 'Email:' %>
+    <%= text_field_tag 'new_user[email]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Text Number (optional):' %>
+    <%= text_field_tag 'new_user[text_number]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Password:' %>
+    <%= password_field_tag 'new_user[password]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Confirmation:' %>
+    <%= password_field_tag 'new_user[password_confirmation]'%>
+  </div>
+
+  <div class='field'>
+    <%= submit_tag %>
+  </div>
+
+<% end %>

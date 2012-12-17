@@ -1,58 +1,52 @@
 BankOfMd::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  root :to => 'home#index'
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  get '/register' => 'register#new'
+  post '/register' => 'register#create'
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/logout' => 'session#destroy'
 
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  get '/overview' => 'overview#index'
 
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  get '/profile/new' => 'users#new'
+  post '/profile/new' => 'users#create'
+  get '/profile' => 'users#show'
+  get '/profile/edit' => 'users#edit'
+  put '/profile/edit' => 'users#update'
 
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
 
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  get '/family' => 'family#index'
+  get '/family/exists' => 'family#exists'
+  get '/family/new' => 'family#new'
+  post '/family/new' => 'family#create'
+  get '/family/edit' => 'family#edit'
+  put '/family/edit' => 'family#update'
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  get '/chores' => 'chores#index'
+  get '/chores/new' => 'chores#new'
+  post '/chores/new' => 'chores#create'
+  get '/chores/edit' => 'chores#edit'
+  put '/chores/edit' => 'chores#update'
 
-  # See how all your routes lay out with "rake routes"
+  get '/accounts' => 'accounts#index'
+  get '/accounts/new' => 'accounts#new'
+  post '/accounts/new' => 'accounts#create'
+  get '/accounts/edit' => 'accounts#edit'
+  put '/accounts/edit' => 'accounts#update'
+  get '/accounts/start' => 'accounts#start'
+  post '/accounts/start' => 'accounts#start_create'
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  get '/transactions' => 'transactions#new'
+  post '/transactions' => 'transactions#create'
+  get '/transactions/edit' => 'transactions#edit'
+  put '/transactions/edit' => 'transactions#update'
+  get '/transactions/account' => 'transactions#account'
+  post '/transactions/account' => 'transactions#account_create'
+
+  get '/allowances/start' => 'allowances#start'
+  post '/allowances/start' => 'allowances#start_create'
+
 end

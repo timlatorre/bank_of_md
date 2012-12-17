@@ -1,0 +1,35 @@
+<h1>transaction by account</h1>
+
+<%= form_tag do %>
+
+  <div class='field'>
+    <%= label_tag 'Owner:' %>
+    <%= @account.child.first_name %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Account:' %>
+    <%= @account.name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag 'Type:' %>
+    <%=  "Credit" if @is_credit == "true" %>
+    <%=  "Debit" if @is_credit == "false" %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Description:' %>
+    <%= text_field_tag 'new_transaction[description]' %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag 'Amount' %>
+    <%= text_field_tag 'new_transaction[amt_change]' %>
+  </div>
+
+  <div class='field'>
+    <%= submit_tag %>
+  </div>
+
+<% end %>
