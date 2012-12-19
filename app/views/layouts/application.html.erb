@@ -13,7 +13,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title><%= content_for?(:title) ? yield(:title) : "The Bank of Mom & Dad" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Bank of Mom & Dad" %></title>
 
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
@@ -24,11 +24,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-      <div class="fixed contain-to-grid">
-        <nav><span id="greeting"><%= "Welcome, " if @auth %><%= link_to "#{@auth.first_name}", profile_path if @auth %></span><%= display_links %></nav>
-      </div><!-- .fixed contain-to-grid -->
-    <%= yield %>
-  </div>
+  <div id="outer_box">
+    <div class="container">
+
+      <div class="four columns">
+          <div id="logo"></div>
+      </div><!-- .four.columns -->
+      <div class="eight columns">
+          <nav class="top-bar">
+            <span class="left" style="color: white; padding: 0 10px;"><%= "Welcome, #{@auth.first_name}" if @auth %></span>
+            <%= display_links %>
+          </nav>
+      </div><!-- .eight.columns -->
+
+      <%= yield %>
+
+    </div><!-- .container -->
+  </div><!-- #outer_box -->
+  <div class="clear"></div>
+  <footer>© 2012, Tim LaTorre.</footer>
 </body>
 </html>

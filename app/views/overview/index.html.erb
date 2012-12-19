@@ -1,8 +1,24 @@
-<h1>Overview</h1>
+<div class="twelve columns title">
+  Accounts<span class="add"><%= link_to "Add", accounts_new_path %></span>
+</div><!-- .twelve.columns -->
 
-<h2>Accounts<span id="add_account"><%= link_to "Add", accounts_new_path %></span></h2>
-<%= render :partial => 'child_accounts', :collection => @children, :as => :child %>
+<div class="twelve columns">
+  <%= render :partial => 'child_accounts', :collection => @children, :as => :child %>
+</div><!-- .twelve.columns -->
 
-<h2>Recent Transactions</h2>
-<%= render :partial => 'transactions', :collection => @transactions, :as => :transactions %>
+<div class="twelve columns title">
+  Recent Transactions
+</div><!-- .twelve.columns -->
 
+<div class="twelve columns">
+  <div class="one column trans_headers">Date</div>
+  <div class="one column trans_headers">Child</div>
+  <div class="two columns trans_headers">Account</div>
+  <div class="four columns trans_headers">Description</div>
+  <div class="two columns trans_headers">Amount</div>
+  <div class="two columns trans_headers">Balance</div>
+</div><!-- .twelve.columns -->
+
+<div class="twelve columns">
+  <%= render :partial => 'transactions', :collection => @transactions, :as => :transactions %>
+</div><!-- .twelve.columns -->

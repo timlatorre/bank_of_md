@@ -1,8 +1,15 @@
-<h1>chores</h1>
-<%= link_to 'new chore', chores_new_path %>
+<div class="twelve columns title">
+  Chores<span class="add"><%= link_to 'add', chores_new_path %></span>
+</div><!-- .twelve.columns -->
 
-<%= render :partial => 'chores', :collection => @children, :as => :child %>
-<div class='clear'></div>
+<div class="twelve columns">
+  <%= render :partial => 'chores', :collection => @children, :as => :child %>
+</div><!-- .twelve.columns -->
 
-<h2>Available Extra Chores</h2>
-<%= render :partial => 'available', :collection => @chores, :as => :chore %>
+<div class="twelve columns title">
+<!  Available Extra Chores >
+</div><!-- .twelve.columns -->
+
+<div class="twelve columns">
+  <%= render :partial => 'available', :collection => @chores, :as => :chore %>
+</div><!-- .twelve.columns -->

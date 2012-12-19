@@ -1,48 +1,54 @@
-<h1>Step 3 of 3: Allowance</h1>
+<div class="forms">
 
-<h2> New User: <%= @new_user.first_name %> </h2>
+  <div class="title">Step 3 of 3: Allowance</div>
 
-<p>Set up an allowance for your child.</p>
+  <h2> New User: <%= @new_user.first_name %> </h2>
 
-<%= form_tag do %>
+  <p>Set up an allowance for your child.</p>
 
-  <div class='field'>
-    <%= label_tag 'How much:' %>
-    <%= text_field_tag 'new_allowance[amount]' %>
-  </div>
+  <%= form_tag do %>
 
-  <div class='field'>
-    <%= label_tag 'How often:' %>
-     <%= select('new_allowance', 'frequency', [['Weekly','w'],['Twice Montly','2x-m'],['Monthy','m']]) %>
-  </div>
+    <div class='field'>
+      <%= label_tag 'How much:' %>
+      <%= text_field_tag 'new_allowance[amount]' %>
+    </div>
 
-  <div class='field'>
-    <%= label_tag 'Which day? (if weekly only)' %>
-     <%= select('new_allowance', 'payday', [['Monday','mon'],['Tuesday','tues'],['Wednesday','weds'],['Thursday','thurs'],['Friday','fri'],['Saturday','sat'],['Sunday','sun']]) %>
-  </div>
+    <div class='field'>
+      <%= label_tag 'How often:' %>
+       <%= select('new_allowance', 'frequency', [['Weekly','w'],['Twice Montly','2x-m'],['Monthy','m']]) %>
+    </div>
 
-<div class="distrib_box">
-  <p>How do you want to distribute the allowance between your 3 main accounts?</p>
-  (these must add up to 100%)
-  <div class='field'>
-    <%= label_tag 'Spending' %>
-    <%= text_field_tag 'spending[percentage]' %> %
-  </div>
+    <div class='field'>
+      <%= label_tag 'Which day? (if weekly only)' %>
+       <%= select('new_allowance', 'payday', [['Monday','mon'],['Tuesday','tues'],['Wednesday','weds'],['Thursday','thurs'],['Friday','fri'],['Saturday','sat'],['Sunday','sun']]) %>
+    </div>
 
-  <div class='field'>
-    <%= label_tag 'Savings' %>
-    <%= text_field_tag 'savings[percentage]' %> %
-  </div>
+    <div class="distrib_box">
 
-  <div class='field'>
-    <%= label_tag 'Charitable' %>
-    <%= text_field_tag 'charitable[percentage]' %> %
-  </div>
+      <p>How do you want to distribute the allowance between your 3 main accounts?</p>
+      (these must add up to 100%)
 
-</div><!-- .distrib_box -->
+      <div class='field'>
+        <%= label_tag 'Spending' %>
+        <%= text_field_tag 'spending[percentage]' %> %
+      </div>
 
-  <div class='field'>
-    <%= submit_tag %>
-  </div>
+      <div class='field'>
+        <%= label_tag 'Savings' %>
+        <%= text_field_tag 'savings[percentage]' %> %
+      </div>
 
-<% end %>
+      <div class='field'>
+        <%= label_tag 'Charitable' %>
+        <%= text_field_tag 'charitable[percentage]' %> %
+      </div>
+
+    </div><!-- .distrib_box -->
+
+    <div class='field'>
+      <%= submit_tag "Create Allowance", :class => "secondary button" %>
+    </div>
+
+  <% end %>
+
+</div><!-- .forms -->

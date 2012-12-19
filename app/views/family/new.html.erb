@@ -1,14 +1,18 @@
-Add a Family
+<div class="forms">
 
-<%= form_tag do %>
+  <div class="title">Add a Family</div>
 
-  <div class='field'>
-    <%= label_tag 'Family Name:' %>
-    <%= text_field_tag 'name' %>
-  </div>
+  <%= form_tag do %>
 
     <div class='field'>
-    <%= submit_tag %>
-  </div>
+      <%= label_tag 'Family Name:' %>
+      <%= text_field_tag 'name' %>
+    </div>
 
-<% end %>
+      <div class='field'>
+      <%= submit_tag "Add Family", :class => "secondary button" %>
+    </div>
+
+  <% end %>
+
+</div><!-- .forms -->

@@ -1,20 +1,20 @@
-<h1>Profile</h1>
+<div class="title">Profile<span class="edit"><%= link_to 'edit', profile_edit_path %></span></div>
 
-<%= link_to 'edit', profile_edit_path %><br>
+<div class="profile_row"><span class="profile_category">Name:</span> <span class="profile_data"><%= @auth.first_name %> <%= @auth.last_name %></span></div>
+<div class="profile_row"><span class="profile_category">Family:</span> <span class="profile_data"><%= @auth.family.name %></span></div>
+<div class="profile_row"><span class="profile_category">Email:</span> <span class="profile_data"><%= @auth.email %></span></div>
+<div class="profile_row"><span class="profile_category">Text number:</span> <span class="profile_data"><%= @auth.text_number %></span></div>
 
-Name: <%= @auth.first_name %> <%= @auth.last_name %><br>
-Family: <%= @auth.family.name %><br>
-Email: <%= @auth.email %><br>
-Text number: <%= @auth.text_number %>
+<div class="title">Family <span class="add"><%= link_to 'Add member', family_exists_path %></span></div>
 
-<h1>Family</h1>
+<div class="family_category">
+  <div class="family_title">Parents</div>
+  <%= render :partial => 'members', :collection => @parents, :as => :member %>
+</div><!-- .family_category -->
 
-<%= link_to 'add family member', family_exists_path %>
+<div class="family_category">
+  <div class="family_title">Children</div>
+  <%= render :partial => 'members', :collection => @children, :as => :member  %>
+</div><!-- .family_category -->
 
-<h2>Parents</h2>
-<%= render :partial => 'members', :collection => @parents, :as => :member %>
-<div class='clear'></div>
-
-<h2>Children</h2>
-<%= render :partial => 'members', :collection => @children, :as => :member  %>
-<div class='clear'></div>
+<div class="clearfix"></div>

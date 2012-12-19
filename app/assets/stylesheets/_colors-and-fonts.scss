@@ -1,0 +1,40 @@
+/*---------------  Colors  ---------------*/
+
+$light-accent: #F5F5F5;
+$main-bkgrnd: white;
+
+
+$link-light-reg: #f22540;
+$link-light-hover: white;
+$link-dark-reg: #fa642f;
+$link-dark-hover: white;
+
+$table-title-box: clear;
+$table-title-text: #c71e34;
+$table-header1-box:   #333333  ;
+$table-header1-text: white;
+$table-header2: #a9a9a9 ;
+$table-data: #dedede    ;
+
+
+
+
+
+
+
+/*---------------  Fonts  ---------------*/
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('DroidSans.ttf');
+}
+
+@font-face {
+    font-family: 'Droid Sans Bold';
+    src: url('DroidSans-Bold.ttf');
+}
+
+$main-sans-reg: 'Droid Sans', Arial, sans-serif;
+$main-sans-bold: 'Droid Sans Bold', Arial, sans-serif;
+
+

@@ -1,10 +1,23 @@
-<h3><%= child.first_name %></h3>
+<div class="four columns">
+  <div class="acct_box">
 
-<% @accounts.each do |account| %>
-<% if account.child_id == child.id %>
-      <%= account.name %>
-      <%= account.balance %>
-      <%= link_to '+', transactions_account_path(:account_id => account.id, :is_credit => true) %>
-      <%= link_to '-', transactions_account_path(:account_id => account.id, :is_credit => false) %><br>
-    <% end %>
-<% end %>
+    <div class="acct_child">
+      <%= child.first_name %>
+    </div><!-- .acct_child -->
+
+      <div class="five columns acct_headers">Account</div>
+      <div class="seven columns acct_headers">Balance</div>
+
+      <% @accounts.each do |account| %>
+        <% if account.child_id == child.id %>
+          <div class="acct_row twelve columns">
+            <div class="acct_name five columns acct_col acct_data"><%= account.name %></div><!-- .acct_name -->
+            <div class="acct_balance five columns acct_col acct_data"><%= account.balance %></div><!-- .acct_balance -->
+            <div class="acct_trans one column acct_col acct_data"><%= link_to '+', transactions_account_path(:account_id => account.id, :is_credit => true) %></div><!-- .acct_credit -->
+            <div class="acct_trans one column acct_col acct_data"><%= link_to '-', transactions_account_path(:account_id => account.id, :is_credit => false) %></div><!-- .acct_debit -->
+          </div><!-- .acct_row .twelve.columns-->
+        <% end %>
+      <% end %>
+
+  </div><!-- .acct_box -->
+</div><!-- .four.columns -->

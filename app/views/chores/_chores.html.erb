@@ -1,23 +1,38 @@
-<h3><%= child.first_name %></h3>
+<div class="six columns chores">
 
-<h4>Allowance</h4>
+  <div class="chore_child">
+    <%= child.first_name %>
+  </div><!-- .chore_child -->
+
+  <div class="chore_type">Allowance</div><!-- .acct_type_name -->
+
+    <div class="four columns chore_headers"> Chore </div>
+    <div class="eight columns chore_headers"> Description </div>
+
     <% @chores.each do |chore|  %>
       <% if chore.child_id == child.id && chore.is_allowance == true %>
-             <div class='chore_row'>
-          <div class='chore_name chore_col'><%= chore.name %></div>
-          <div class='chore_description chore_col'><%= chore.description %></div>
-        </div><!-- .chore_row --><br>
+        <div class="chore_row twelve columns">
+          <div class="four columns chore_name chore_data"><%= chore.name %></div>
+          <div class="eight columns chore_description chore_data"><%= chore.description %></div>
+       </div><!-- .chores_indv_row -->
+       <div class="clear"></div>
       <% end %>
     <% end %>
 
-<h4>Extra</h4>
+  <div class="chore_type">Extra</div>
+    <div class="four columns chore_headers"> Chore </div>
+    <div class="five columns chore_headers"> Description </div>
+    <div class="three columns chore_headers"> Price </div>
 
-<% @chores.each do |chore| %>
-  <% if chore.child_id == child.id && chore.is_allowance == false %>
-    <div class='chore_row'>
-      <div class='chore_name chore_col'><%= chore.name %></div>
-      <div class='chore_description chore_col'><%= chore.description %></div>
-      <div class='chore_amount chore_col'><%= chore.amount %></div>
-    </div><!-- .chore_row --><br>
+
+  <% @chores.each do |chore| %>
+    <% if chore.child_id == child.id && chore.is_allowance == false %>
+      <div class="chore_row twelve columns">
+        <div class="four columns chore_name chore_data"><%= chore.name %></div>
+        <div class="five columns chore_description chore_data"><%= chore.description %></div>
+        <div class="three columns chore_amount chore_data">$<%= chore.amount %></div>
+      </div><!-- .chores_indv_row -->
+    <% end %>
   <% end %>
-<% end %>
+
+</div><!-- .six.columns .chores -->

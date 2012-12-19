@@ -1,0 +1,49 @@
+/*---------------  Structure  ---------------*/
+
+#outer_box { margin-top: 20px; }
+.container { width: 1080px; margin: 0 auto; padding: 0 30px; }
+
+#logo { width: 320px; height: 67px; background-image:url('BankofMD_outline.png'); background-repeat:no-repeat; margin: 25px auto 0 auto; }
+.top-bar { margin-top: 45px; padding-right: 10px; }
+nav span { margin: 0 20px; }
+nav a { padding: 0 13px; float: right; }
+
+.title { margin: 40px 0 20px 0;  }
+.forms { width: 400px; margin: 0 auto; }
+.field { margin-bottom: 7px; }
+label { margin-bottom: 7px; }
+
+footer { height: 30px; margin-top: 30px; }
+
+/*---------------  Tables: Accounts  ---------------*/
+
+.acct_child { padding: 5px; margin: 20px 0 5px 0; }
+.acct_headers { padding: 5px; margin: 3px 0; }
+.acct_row { padding: 0; }
+.acct_data { padding: 5px; margin: 1px 0;}
+.acct_trans {  }
+
+.acct_label { }
+
+/*---------------  Tables: Chores  ---------------*/
+
+.chore_child { padding: 5px; margin: 20px 0 5px 0;}
+.chore_type { padding: 5px; margin: 10px 0 5px 0; }
+.chore_headers { padding: 5px; margin: 3px 0; }
+.chore_row { padding: 0; margin: 3px 0; }
+.chore_data  { padding: 5px; }
+
+/*---------------  Tables: Transactions  ---------------*/
+
+.trans_headers { padding: 5px; margin: 3px 0; }
+.trans_data { padding: 5px; margin: 1px 0; }
+
+
+/*---------------  Profile & Family ---------------*/
+.profile_row { margin: 4px 0; }
+.profile_category {  }
+.profile_data { margin-left: 5px;  }
+
+.family_category { float: left; margin: 0 40px 10px 0; }
+.family_title { margin-bottom: 7px; }
+.family_member { margin: 4px 0; }

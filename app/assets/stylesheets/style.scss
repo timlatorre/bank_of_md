@@ -1,0 +1,70 @@
+@import 'colors-and-fonts';
+
+/*---------------  Application & Nav  ---------------*/
+
+body { background-color: $light-accent; background: url('gray_jean.png'); font-family: $main-sans-reg; font-weight: 400;}
+#outer_box { }
+.container {  }
+
+#logo {  }
+.top-bar {  }
+nav ul li { color: white; padding: 0 10px;}
+nav a { color: $link-light-reg; font-family: $main-sans-bold; }
+nav a:hover { color: $link-light-hover;}
+
+footer { text-align: center; }
+
+/*---------------  Globals  ---------------*/
+
+
+.home_header { font-size: 30px; font-family: $main-sans-bold; text-align: center; }
+.home_info { font-size: 20px; font-family: $main-sans-reg; text-align: center; }
+.home_register { font-size: 30px; font-family: $main-sans-bold; text-align: center; }
+
+.title { font-size: 30px; font-weight: 700;  }
+.add { font-size: 16px; font-weight: bold; margin-left: 10px; }
+.edit { font-size: 16px; font-weight: bold; margin-left: 10px; }
+.forms {  }
+.field {  }
+label { font-family: $main-sans-bold; }
+
+a { color: $link-dark-reg; }
+a:hover { color: $link-dark-hover;}
+
+p { font-family: $main-sans-reg; }
+h1, h2, h3, h4, h5, h6 { font-family: $main-sans-bold; font-weight: 700;}
+
+
+/*---------------  Tables: Accounts  ---------------*/
+
+.acct_child  { font-family: $main-sans-bold; font-size: 24px; background-color: $table-title-box; color: $table-title-text }
+.acct_headers { font-family: $main-sans-bold; background-color: $table-header2;  }
+.acct_row {  }
+.acct_data { background-color: $table-data; }
+.acct_trans {  }
+
+.acct_label {  }
+
+/*---------------  Tables: Transactions  ---------------*/
+
+.trans_headers { font-family: $main-sans-bold; background-color: $table-header2;  }
+.trans_data { background-color: $table-data }
+
+
+/*---------------  Tables: Chores  ---------------*/
+
+.chore_child { font-family: $main-sans-bold; font-size: 24px; background-color: $table-title-box; color: $table-title-text; }
+.chore_type { font-family: $main-sans-bold; background-color: $table-header1-box; color: $table-header1-text; }
+.chore_headers { font-family: $main-sans-bold; background-color: $table-header2;  }
+.chore_row {  }
+.chore_col {  }
+.chore_data { background-color: $table-data; min-height: 100%; background-color: $table-data; }
+
+
+/*---------------  Family ---------------*/
+.profile_row {  }
+.profile_category { font-family: $main-sans-bold;  }
+.profile_data { font-family: $main-sans-reg;  }
+
+.family_category {  }
+.family_title { font-size: 20px; font-weight: 700;  }

@@ -1,28 +1,33 @@
-<h1>New Transaction</h1>
-<%= form_tag do %>
+<div class="forms">
 
-  <div class='field'>
-    <%= label_tag 'Account:' %>
-    <%= select("new_transaction", "account_id", @accounts.collect {|account| [ "#{account.child.first_name.titlecase}, #{account.name.titlecase}", account.id ] }, {:prompt => 'Select Account'}) %>
-  </div>
+  <div class="title">New Transaction</div>
 
-  <div class='field'>
-    <%= label_tag 'Description:' %>
-    <%= text_field_tag 'new_transaction[description]' %>
-  </div>
+  <%= form_tag do %>
 
-  <div class="field">
-    <%= radio_button_tag 'new_transaction[is_credit]', 'true' %> Credit<br>
-    <%= radio_button_tag 'new_transaction[is_credit]', 'false' %> Debit<br>
-  </div>
+    <div class='field'>
+      <%= label_tag 'Account:' %>
+      <%= select("new_transaction", "account_id", @accounts.collect {|account| [ "#{account.child.first_name.titlecase}, #{account.name.titlecase}", account.id ] }, {:prompt => 'Select Account'}, :class => 'large button dropdown') %>
+    </div>
 
-  <div class='field'>
-    <%= label_tag 'Amount' %>
-    <%= text_field_tag 'new_transaction[amt_change]' %>
-  </div>
+    <div class='field'>
+      <%= label_tag 'Description:' %>
+      <%= text_field_tag 'new_transaction[description]' %>
+    </div>
 
-  <div class='field'>
-    <%= submit_tag %>
-  </div>
+    <div class="field">
+      <%= radio_button_tag 'new_transaction[is_credit]', 'true' %> Credit<br>
+      <%= radio_button_tag 'new_transaction[is_credit]', 'false' %> Debit<br>
+    </div>
 
-<% end %>
+    <div class='field'>
+      <%= label_tag 'Amount' %>
+      <%= text_field_tag 'new_transaction[amt_change]' %>
+    </div>
+
+    <div class='field'>
+      <%= submit_tag "Submit", :class => "secondary button" %>
+    </div>
+
+  <% end %>
+
+</div><!-- .forms -->
