@@ -150,7 +150,7 @@ DEPENDENCIES
   pg
   pry-rails
   quiet_assets
-  rails (= 3.2.9)
+  rails
   sass-rails
   uglifier
   zurb-foundation

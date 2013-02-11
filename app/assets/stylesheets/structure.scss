@@ -3,7 +3,8 @@
 #outer_box { margin-top: 20px; }
 .container { width: 1080px; margin: 0 auto; padding: 0 30px; }
 
-#logo { width: 340px; height: 71px; background-image:url('BankofMD_outline.png'); background-repeat:no-repeat; margin: 25px 0 0 0; }
+#logo { width: 340px; height: 71px; background-image:url('BankofMD_outline.png'); background-repeat:no-repeat; margin: 25px 0 0 0; text-indent: 100%; white-space: nowrap; overflow: hidden;}
+#logo a { display: block; width: 340px; height: 71px; }
 .top-bar { margin-top: 50px; padding-right: 10px; margin-left: 20px; }
 nav span { margin: 0 20px; }
 nav a { padding: 0 13px; float: right; }

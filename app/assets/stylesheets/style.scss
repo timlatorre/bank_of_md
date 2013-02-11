@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $main-sans-bold; font-weight: 700;}
 /*---------------  Home Page  ---------------*/
 #featured {  }
 #home_box1 { font-size: 20px; font-family: $main-sans-reg; text-align: left; padding: 10px 10px 3px 20px; background-color: $nav; color: white; }
+#home_box1 strong { font-family: $main-sans-bold; }
 #home_box2 a { width: 100%; font-size: 22px; font-family: $main-sans-bold; text-align: center; padding: 17px 0 0 0; background-color: $link-light-reg; color: white; display: block; margin: 10px 0 0 0; height: 56px; }
 #home_box2 a:hover { color: $nav; }
 
