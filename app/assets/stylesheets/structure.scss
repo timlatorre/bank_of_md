@@ -3,8 +3,8 @@
 #outer_box { margin-top: 20px; }
 .container { width: 1080px; margin: 0 auto; padding: 0 30px; }
 
-#logo { width: 320px; height: 67px; background-image:url('BankofMD_outline.png'); background-repeat:no-repeat; margin: 25px auto 0 auto; }
-.top-bar { margin-top: 45px; padding-right: 10px; }
+#logo { width: 340px; height: 71px; background-image:url('BankofMD_outline.png'); background-repeat:no-repeat; margin: 25px 0 0 0; }
+.top-bar { margin-top: 50px; padding-right: 10px; margin-left: 20px; }
 nav span { margin: 0 20px; }
 nav a { padding: 0 13px; float: right; }
 
@@ -14,6 +14,12 @@ nav a { padding: 0 13px; float: right; }
 label { margin-bottom: 7px; }
 
 footer { height: 30px; margin-top: 30px; }
+
+/*---------------  Home Page  ---------------*/
+#featured { width: 736px; height: 400px; }
+#home_box1 {  }
+#home_box2 {  }
+
 
 /*---------------  Tables: Accounts  ---------------*/
 

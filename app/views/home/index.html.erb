@@ -1,7 +1,30 @@
-<p class="home_header">Have trouble keeping track of your child's chores and allowance?</p>
+<div class="row">
+  <div class="nine columns">
+    <div id="featured">
+        <%= image_tag("home_featured_1.jpg") %>
+        <%= image_tag("home_featured_3.jpg") %>
+        <%= image_tag("home_featured_2.jpg") %>
+        <%= image_tag("home_featured_4.jpg") %>
+    </div><!-- #featured -->
+  </div><!-- .nine.columns #featured -->
 
-<p class="home_info"><strong>The Bank of Mom & Dad </strong> can help you assign chores, keep track of completion status, administer allowances, and manage credit/debit transactions. Simplify your children's "work life" while teaching them the basics of our modern economy.</p>
-
-<p class="home_register">Register now!</p>
+  <div class="three columns">
+    <div id="home_box1">
+      <p><strong>Bank of Mom & Dad</strong> is a chore organizer and virtual bank. It helps parents keep track of their children's chores, administer allowances, and manage credit/debit transactions.</p> <p>Help your children reach their financial goals and march towards independence by teaching them good banking habits in a realistic environment.</p>
+    </div><!-- #home_box1 -->
+    <div id="home_box2">
+      <%= link_to("Register Now!", register_path) %>
+    </div><!-- #home_box2 -->
+  </div><!-- .three.columns -->
 
 <div class="clearfix"></div>
+
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $("#featured").orbit({
+  advanceSpeed: 3000,
+  animationSpeed: 500,
+});
+   });
+</script>

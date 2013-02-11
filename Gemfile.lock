@@ -144,13 +144,13 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   binding_of_caller
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   compass-rails
   jquery-rails
   pg
   pry-rails
   quiet_assets
   rails (= 3.2.9)
-  sass-rails (~> 3.2.3)
-  uglifier (>= 1.0.3)
+  sass-rails
+  uglifier
   zurb-foundation

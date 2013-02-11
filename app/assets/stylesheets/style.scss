@@ -2,10 +2,12 @@
 
 /*---------------  Application & Nav  ---------------*/
 
-body { background-color: $light-accent; background: url('gray_jean.png'); font-family: $main-sans-reg; font-weight: 400;}
+html {margin: 0; padding: 0; }
+body { background-color: $light-accent; background: url('gray_jean.png'); font-family: $main-sans-reg; font-weight: 400; margin: 0;}
 #outer_box { }
 .container {  }
 
+#top-border { width: 100%; background-color: $nav; height: 10px; }
 #logo {  }
 .top-bar {  }
 nav ul li { color: white; padding: 0 10px;}
@@ -15,12 +17,6 @@ nav a:hover { color: $link-light-hover;}
 footer { text-align: center; }
 
 /*---------------  Globals  ---------------*/
-
-
-.home_header { font-size: 30px; font-family: $main-sans-bold; text-align: center; }
-.home_info { font-size: 20px; font-family: $main-sans-reg; text-align: center; }
-.home_register { font-size: 30px; font-family: $main-sans-bold; text-align: center; }
-
 .title { font-size: 30px; font-weight: 700;  }
 .add { font-size: 16px; font-weight: bold; margin-left: 10px; }
 .edit { font-size: 16px; font-weight: bold; margin-left: 10px; }
@@ -34,6 +30,11 @@ a:hover { color: $link-dark-hover;}
 p { font-family: $main-sans-reg; }
 h1, h2, h3, h4, h5, h6 { font-family: $main-sans-bold; font-weight: 700;}
 
+/*---------------  Home Page  ---------------*/
+#featured {  }
+#home_box1 { font-size: 20px; font-family: $main-sans-reg; text-align: left; padding: 10px 10px 3px 20px; background-color: $nav; color: white; }
+#home_box2 a { width: 100%; font-size: 22px; font-family: $main-sans-bold; text-align: center; padding: 17px 0 0 0; background-color: $link-light-reg; color: white; display: block; margin: 10px 0 0 0; height: 56px; }
+#home_box2 a:hover { color: $nav; }
 
 /*---------------  Tables: Accounts  ---------------*/
 

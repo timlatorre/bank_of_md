@@ -23,25 +23,28 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div id="outer_box">
-    <div class="container">
+  <div id="top-border"></div>
+    <div id="outer_box">
+        <div class="container">
 
-      <div class="four columns">
-          <div id="logo"></div>
-      </div><!-- .four.columns -->
-      <div class="eight columns">
-          <nav class="top-bar">
-            <span class="left" style="color: white; padding: 0 10px;"><%= "Welcome, #{@auth.first_name}" if @auth %></span>
-            <%= display_links %>
-          </nav>
-      </div><!-- .eight.columns -->
+          <div class="row">
+            <div class="four columns">
+                <div id="logo"></div>
+            </div><!-- .four.columns -->
+            <div class="eight columns">
+                <nav class="top-bar">
+                  <span class="left" style="color: white; padding: 0 10px;"><%= "Welcome, #{@auth.first_name}" if @auth %></span>
+                  <%= display_links %>
+                </nav>
+            </div><!-- .eight.columns -->
+          </div><!-- .row -->
 
-      <%= yield %>
-
-    </div><!-- .container -->
-  </div><!-- #outer_box -->
+          <div class="row">
+            <%= yield %>
+          </div><!-- .row -->
+        </div><!-- .container -->
   <div class="clear"></div>
   <footer>© 2012, Tim LaTorre.</footer>
+  </div><!-- top-border -->
 </body>
 </html>
